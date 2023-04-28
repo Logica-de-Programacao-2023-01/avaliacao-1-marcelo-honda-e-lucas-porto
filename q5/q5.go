@@ -18,12 +18,15 @@ func ProcessString(s string) string {
 	// Seu código aqui
 	return ""
 }
-vogais := "aeiouAEIOU"
-	final := strings.ReplaceAll(s, vogais, "")
-	novo := strings.ToLower(final)
+ a:= strings.ReplaceAll(s,"a", "")
+	 e:=strings.ReplaceAll(a,"e","")
+	 i:=strings.ReplaceAll(e,"i","")
+	 o:=strings.ReplaceAll(i,"o","")
+	 u:=strings.ReplaceAll(o,"u","")
+	novo := strings.ToLower(u)
 	resultado:=""
-	
+
 	for i:=0;i<len(novo);i++{
 		resultado += "." + string(novo[i])
 	}
-	return novo
+	return resultado
