@@ -14,5 +14,21 @@ package q2
 
 func ProblemsSolved(answers [][3]bool) int {
 	// Seu código aqui
-	return 0
+	certo := 0
+	linhacorreta := 0
+	for i := 0; i < len(answers); i++ {
+		certo = 0
+		for j := 0; j < 3; j++ {
+			vale := answers[i][j]
+			if vale == true {
+				certo++
+			}
+
+		}
+		if certo >= 2 {
+			linhacorreta++
+		}
+
+	}
+	return linhacorreta
 }
