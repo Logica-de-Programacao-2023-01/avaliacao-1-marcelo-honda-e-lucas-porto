@@ -16,5 +16,17 @@ package q5
 
 func ProcessString(s string) string {
 	// Seu código aqui
-	return ""
+	novo := strings.ToLower(s)
+	a := strings.ReplaceAll(novo, "a", "")
+	e := strings.ReplaceAll(a, "e", "")
+	i := strings.ReplaceAll(e, "i", "")
+	o := strings.ReplaceAll(i, "o", "")
+	u := strings.ReplaceAll(o, "u", "")
+
+	resultado := ""
+
+	for i := 0; i < len(u); i++ {
+		resultado += "." + string(u[i])
+	}
+	return resultado
 }
