@@ -13,18 +13,4 @@ func ClassifyPrices(prices []int) (int, error) {
 	// Seu código aqui
 	return 0, nil
 }
-if len(prices) == 0 {
-		return 0, fmt.Errorf("lista vazia")
-	}
-	if len(prices) == 1 {
-		return 3, nil
-	}
-	for i := 0; i < len(prices); i++ {
-		if prices[i] > prices[i+1] {
-			return 2, nil
-		} else if prices[i] < prices[i+1] {
-			return 1, nil
-		}
-	}
-	return 3, nil
-}
+
